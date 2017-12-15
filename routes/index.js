@@ -36,6 +36,7 @@ router.get('/list',function (req,res) {
         }
 });
 });
+
 function download(req,res) {
     console.log('name file',req.files.file.name);
 
