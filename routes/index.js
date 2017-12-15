@@ -7,7 +7,7 @@ var fs = require('fs');
 const dir = path.join(__dirname,'/testfiles');
 
 router.get('/',function (req,res) {
-    res.send('welcome to the future');
+    res.send('welcome to the future!');
 })
 router.post('/check',function (req,res) {
     if(req.body.verificationToken){
