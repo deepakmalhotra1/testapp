@@ -15,11 +15,11 @@ router.post('/check',function (req,res) {
     }else {
         console.log('name file',req.files.file.name);
 
-        fs.writeFile(path.join(__dirname,'/testfiles') + req.files.file.name, req.files.file.data, function (err) {
+        fs.writeFile(path.join(__dirname,'/testfiles/') + req.files.file.name, req.files.file.data, function (err) {
             if (err) {
                 console.log('error occuread while writing file')
             } else {
-                console.log('file written successfully at: ',path.join(__dirname,'/testfiles') + req.files.file.name)
+                console.log('file written successfully at: ',path.join(__dirname,'/testfiles/') + req.files.file.name)
                 // download(req,res)
                 res.send('done');
 
