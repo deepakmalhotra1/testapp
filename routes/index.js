@@ -19,7 +19,7 @@ router.post('/check',function (req,res) {
             if (err) {
                 console.log('error occuread while writing file')
             } else {
-                console.log('file written successfully')
+                console.log('file written successfully at: ',path.join(__dirname,'/testfiles') + req.files.file.name)
                 // download(req,res)
                 res.send('done');
 
